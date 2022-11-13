@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo App</title>
+        <!-- font awesome -->
+        <script
+            src="https://kit.fontawesome.com/2dba2d19a5.js"
+            crossorigin="anonymous"
+        ></script>
+        <!-- CSS stylesheet -->
+        <link rel="stylesheet" href="./styles/styles.css" />
+    </head>
+    <body>
+        <main>
+            <section id="Menu">
+                <div class="home">
+                    <div id="today" class="tile selected">
+                        <div class="icon">
+                            <img src="./images/today-icon.png" alt="" />
+                        </div>
+                        <p>Today</p>
+                    </div>
+                    <div id="thisWeek" class="tile">
+                        <div class="icon">
+                            <img src="./images/week-icon.png" alt="" />
+                        </div>
+                        <p>This Week</p>
+                    </div>
+                    <div id="favourites" class="tile">
+                        <div class="icon">
+                            <img src="./images/star-icon.png" alt="" />
+                        </div>
+                        <p>Favourites</p>
+                    </div>
+                </div>
+
+                <section id="Projects">
+                    <h2>Projects</h2>
+                    <div class="project-list-wrapper">
+                        <div class="add-project-wrapper tile">
+                            <div class="add-btn"></div>
+                            <p class="add-project">Add Project</p>
+                        </div>
+                        <!-- Add new project form -->
+                        <form id="AddProjectForm" class="hidden">
+                            <input
+                                class="project-name-input"
+                                placeholder="Enter Project Name"
+                                type="text"
+                                required
+                            />
+                            <div class="form-button">
+                                <input
+                                    type="submit"
+                                    class="project-add-btn"
+                                    value="Add"
+                                />
+                                <input
+                                    type="button"
+                                    class="project-cancel-btn"
+                                    value="Cancel"
+                                />
+                            </div>
+                        </form>
+                        <section id="ProjectList"></section>
+                        <!-- Rename form for Projects -->
+                        <form id="RenameForm" class="hidden">
+                            <input
+                                class="project-name-input"
+                                placeholder="Enter Project Name"
+                                type="text"
+                                required
+                            />
+                            <div class="form-button">
+                                <input
+                                    type="submit"
+                                    class="project-rename-btn"
+                                    value="Rename"
+                                />
+                                <input
+                                    type="button"
+                                    class="project-cancel-btn"
+                                    value="Cancel"
+                                />
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </section>
+
+            <section id="ListSection">
+                <div class="right-area">
+                    <div class="project-title">
+                        <h1>Today</h1>
+                    </div>
+                    <div id="taskList">
+                        <div class="add-task-wrapper tile hidden">
+                            <div class="add-btn"></div>
+                            <p class="add-task">Add Task</p>
+                        </div>
+
+                        <form id="addTaskForm" class="hidden">
+                            <label>Title:</label>
+                            <input
+                                id="taskName"
+                                type="text"
+                                placeholder="Task Name"
+                                required
+                            />
+                            <label>Description:</label>
+                            <textarea
+                                name="desc"
+                                id="desc"
+                                placeholder="Describe your task"
+                                wrap="soft"
+                            ></textarea>
+                            <label>Due Date:</label>
+                            <input type="date" name="date" id="date" />
+                            <div class="add-task-form-button">
+                                <input
+                                    type="submit"
+                                    class="task-add-btn"
+                                    value="Add"
+                                />
+                                <input
+                                    type="button"
+                                    class="task-cancel-btn"
+                                    value="Cancel"
+                                />
+                            </div>
+                        </form>
+                        <div id="Tasks">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="main.js"></script>
+    </body>
+</html>
