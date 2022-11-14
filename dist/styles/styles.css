@@ -459,4 +459,16 @@ main {
 
 .selected {
   background-color: #008000 !important;
+}
+
+@media (max-width: 820px) {
+  main {
+    flex-direction: column;
+  }
+  #Menu {
+    max-width: unset;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }/*# sourceMappingURL=styles.css.map */
