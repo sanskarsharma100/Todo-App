@@ -378,6 +378,7 @@ main {
 }
 .taskInfo #taskTitle .taskName {
   margin-right: auto;
+  font-weight: 500;
 }
 .taskInfo #taskTitle .task-buttons {
   display: flex;
@@ -435,7 +436,7 @@ main {
   background-color: #1b284b;
 }
 .taskInfo .arrow-btn .arrow-down {
-  border: solid hsl(0deg, 0%, 90%);
+  border: solid #ffffff;
   border-width: 0 3px 3px 0;
   padding: 2px;
   margin-top: 4px;

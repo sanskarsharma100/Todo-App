@@ -411,6 +411,7 @@ main {
 
         .taskName {
             margin-right: auto;
+            font-weight: 500;
         }
 
         .task-buttons {
@@ -475,26 +476,13 @@ main {
             overflow-wrap: break-word;
         }
 
-        
     }
-
-    // &:hover {
-    //     #taskTitle {
-    //         cursor: pointer;
-    //     }
-
-    //     #description {
-    //         max-height: 500px;
-    //         transition: max-height 0.8s cubic-bezier(0.42, 0, 1, 1);
-    //     }
-    // }
 
     .arrow-btn {
         background-color: $bg-color2;
-        // box-shadow: 0px 0px 5px 2px $border-color;
 
         .arrow-down {
-            border: solid hsl(0, 0%, 90%);
+            border: solid $border-color;
             border-width: 0 3px 3px 0;
             padding: 2px;
             margin-top: 4px;
