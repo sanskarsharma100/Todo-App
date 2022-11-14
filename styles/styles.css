@@ -109,7 +109,13 @@ main {
   margin-top: 6px;
 }
 .ham-btn:hover {
-  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.grabbing-cursor {
+  cursor: -webkit-grabbing !important;
+  cursor: grabbing !important;
 }
 
 .delete-and-rename {
@@ -430,12 +436,24 @@ main {
   font-size: 0.8em;
   overflow-wrap: break-word;
 }
-.taskInfo:hover #taskTitle {
-  cursor: pointer;
+.taskInfo .arrow-btn {
+  border: 1px solid white;
 }
-.taskInfo:hover #description {
-  max-height: 500px;
-  transition: max-height 0.8s cubic-bezier(0.42, 0, 1, 1);
+.taskInfo .arrow-btn .arrow-down {
+  border: solid hsl(0deg, 0%, 90%);
+  border-width: 0 3px 3px 0;
+  padding: 2px;
+  margin-top: 2px;
+  margin-bottom: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: rotate(45deg);
+  transition: 500ms;
+  width: 5px;
+  height: 5px;
+}
+.taskInfo .arrow-btn:hover {
+  cursor: pointer;
 }
 
 .strike-through {

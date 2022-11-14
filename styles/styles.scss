@@ -134,9 +134,15 @@ main {
     }
 
     &:hover {
-        cursor: pointer;
+        cursor: grab;
     }
 }
+
+.grabbing-cursor {
+    cursor: grabbing !important; 
+}
+
+
 
 .delete-and-rename {
     display: flex;
@@ -476,14 +482,36 @@ main {
         }
     }
 
-    &:hover {
-        #taskTitle {
-            cursor: pointer;
+    // &:hover {
+    //     #taskTitle {
+    //         cursor: pointer;
+    //     }
+
+    //     #description {
+    //         max-height: 500px;
+    //         transition: max-height 0.8s cubic-bezier(0.42, 0, 1, 1);
+    //     }
+    // }
+
+    .arrow-btn {
+        border: 1px solid white;
+
+        .arrow-down {
+            border: solid hsl(0, 0%, 90%);
+            border-width: 0 3px 3px 0;
+            padding: 2px;
+            margin-top: 2px;
+            margin-bottom: 4px;
+            margin-left: auto;
+            margin-right: auto;
+            transform: rotate(45deg);
+            transition: 500ms;
+            width: 5px;
+            height: 5px;
         }
 
-        #description {
-            max-height: 500px;
-            transition: max-height 0.8s cubic-bezier(0.42, 0, 1, 1);
+        &:hover {
+            cursor: pointer;
         }
     }
 }
