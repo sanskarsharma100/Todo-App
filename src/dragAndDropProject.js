@@ -47,7 +47,6 @@ function dragDrop() {
     const dragEndIndex = +this.getAttribute('data-project');
     console.log('dragEndIndex',dragEndIndex);
     swapItems(dragStartIndex, dragEndIndex);
-    this.classList.remove('over');
 }
 
 function swapItems(startIndex, endIndex) {

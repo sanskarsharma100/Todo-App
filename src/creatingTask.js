@@ -116,7 +116,11 @@ function addTasktoUI(taskName, description, date, taskListId, favorite, complete
     taskContainer.appendChild(taskTitle);
     taskContainer.appendChild(descContainer);
 
-    
+    const arrowBtn = newElement('div', '', 'arrow-btn');
+    arrowBtn.innerHTML = '<div class="arrow-down"></div>';
+
+    taskContainer.appendChild(arrowBtn);
+
     document.querySelector("#Tasks").append(taskContainer);
 }
 

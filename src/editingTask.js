@@ -11,6 +11,8 @@ function processBtnActions(e) {
     const favBtn = e.target.closest('#taskTitle .fav-btn');
     const deleteBtn = e.target.closest('#taskTitle .delete-task-btn');
     const renameBtn = e.target.closest('#taskTitle .rename-task-btn');
+    const descExpand = e.target.closest('.taskInfo .arrow-btn');
+    
     
     if(checkBox) {
         checkCompleted(checkBox);
@@ -20,6 +22,9 @@ function processBtnActions(e) {
         checkDelete(deleteBtn);
     } else if(renameBtn) {
         checkRename(renameBtn);
+    } else if(descExpand) {
+        console.log('descExpand', descExpand);
+        checkDescExpand(descExpand);
     }
 }
 
@@ -152,6 +157,21 @@ function processTaskRename(e) {
 
     selectedTask.classList.remove('hidden');
     hideRenameTaskForm();
+}
+
+function checkDescExpand(descExpand) {
+    console.log("sibling",descExpand.previousSibling);
+    const desc = descExpand.previousSibling;
+    const arrow = descExpand.firstChild;
+    console.log('transform', arrow.computedStyleMap().get('transform')[0].angle.value);
+    if(arrow.computedStyleMap().get('transform')[0].angle.value == 45) {
+        arrow.style.transform = 'rotate(-135deg)'
+    } else {
+        arrow.style.transform = 'rotate(45deg)'
+    }
+    if(desc.textContent) {
+        desc.classList.toggle('expanded-desc');
+    }
 }
 
 function findHiddenTask() {
