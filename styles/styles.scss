@@ -138,12 +138,6 @@ main {
     }
 }
 
-.grabbing-cursor {
-    cursor: grabbing !important; 
-}
-
-
-
 .delete-and-rename {
     display: flex;
     gap: 2px;
@@ -471,7 +465,7 @@ main {
         max-height: 0;
         overflow: hidden;
         border: 1px solid $border-color;
-        transition: max-height 0.3s ease-in-out;
+        transition: max-height 0.5s ease-in-out;
 
         p {
             margin: 0.5rem;
@@ -480,6 +474,8 @@ main {
             font-size: 0.8em;
             overflow-wrap: break-word;
         }
+
+        
     }
 
     // &:hover {
@@ -494,17 +490,18 @@ main {
     // }
 
     .arrow-btn {
-        border: 1px solid white;
+        background-color: $bg-color2;
+        // box-shadow: 0px 0px 5px 2px $border-color;
 
         .arrow-down {
             border: solid hsl(0, 0%, 90%);
             border-width: 0 3px 3px 0;
             padding: 2px;
-            margin-top: 2px;
+            margin-top: 4px;
             margin-bottom: 4px;
+            transform: rotate(45deg);
             margin-left: auto;
             margin-right: auto;
-            transform: rotate(45deg);
             transition: 500ms;
             width: 5px;
             height: 5px;
@@ -516,21 +513,18 @@ main {
     }
 }
 
+.expanded-desc {
+    max-height: 500px !important;
+    transition: max-height 0.5s ease-in-out;
+}
+
 .strike-through {
     text-decoration: line-through !important;
 }
 
-.dim {
-    color: $grayed-out-text-color;
-
-    .fav-btn {
-        color: $grayed-out-text-color !important;
-    }
-
-    #taskTitle,
-    #description {
-        border-color: $grayed-out-text-color;
-    }
+.dim * {
+    color: $grayed-out-text-color !important;
+    border-color: $grayed-out-text-color !important;
 }
 
 .hidden {

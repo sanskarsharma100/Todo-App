@@ -113,11 +113,6 @@ main {
   cursor: grab;
 }
 
-.grabbing-cursor {
-  cursor: -webkit-grabbing !important;
-  cursor: grabbing !important;
-}
-
 .delete-and-rename {
   display: flex;
   gap: 2px;
@@ -427,7 +422,7 @@ main {
   max-height: 0;
   overflow: hidden;
   border: 1px solid #ffffff;
-  transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
 }
 .taskInfo #description p {
   margin: 0.5rem;
@@ -437,17 +432,17 @@ main {
   overflow-wrap: break-word;
 }
 .taskInfo .arrow-btn {
-  border: 1px solid white;
+  background-color: #1b284b;
 }
 .taskInfo .arrow-btn .arrow-down {
   border: solid hsl(0deg, 0%, 90%);
   border-width: 0 3px 3px 0;
   padding: 2px;
-  margin-top: 2px;
+  margin-top: 4px;
   margin-bottom: 4px;
+  transform: rotate(45deg);
   margin-left: auto;
   margin-right: auto;
-  transform: rotate(45deg);
   transition: 500ms;
   width: 5px;
   height: 5px;
@@ -456,19 +451,18 @@ main {
   cursor: pointer;
 }
 
+.expanded-desc {
+  max-height: 500px !important;
+  transition: max-height 0.5s ease-in-out;
+}
+
 .strike-through {
   text-decoration: line-through !important;
 }
 
-.dim {
-  color: #808080;
-}
-.dim .fav-btn {
+.dim * {
   color: #808080 !important;
-}
-.dim #taskTitle,
-.dim #description {
-  border-color: #808080;
+  border-color: #808080 !important;
 }
 
 .hidden {
