@@ -33,7 +33,7 @@ main {
   background: #f1f1f1;
 }
 #Menu ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #b3b3b3;
 }
 
 ::-webkit-scrollbar {
