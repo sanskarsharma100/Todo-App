@@ -7,7 +7,7 @@
 
 body {
   color: #ffffff;
-  background-color: #0f3460;
+  background-color: #1a1a1a;
   font-family: "Roboto", sans-serif;
 }
 
@@ -15,14 +15,10 @@ main {
   display: flex;
 }
 
-.tile:hover {
-  cursor: pointer;
-}
-
 #Menu {
   display: flex;
   flex-direction: column;
-  background-color: #15203c;
+  background-color: #121212;
   width: 100%;
   max-width: 25rem;
   height: 100vh;
@@ -70,10 +66,10 @@ main {
   gap: 0.5rem;
 }
 #Projects h2 {
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid #b3b3b3;
 }
 #Projects .add-project-wrapper {
-  background-color: #533483;
+  background-color: #008000;
 }
 #Projects .add-project-wrapper p {
   margin-left: auto;
@@ -145,6 +141,7 @@ main {
   height: fit-content;
   padding: 0.5rem 0;
   border-radius: 0.3rem;
+  transition: 0.3s;
 }
 .tile img {
   height: 24px;
@@ -154,7 +151,7 @@ main {
 }
 .tile:hover {
   cursor: pointer;
-  background-color: #1b284b;
+  background-color: #333333;
 }
 
 .project-list-wrapper {
@@ -173,7 +170,7 @@ main {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  border: 2px solid #ffffff;
+  border: 2px solid #b3b3b3;
   border-radius: 50%;
   left: 5px;
 }
@@ -202,7 +199,7 @@ main {
 
 #AddProjectForm .project-name-input,
 #RenameForm .project-name-input {
-  background-color: #0f3460;
+  background-color: #1a1a1a;
   outline: none;
   border: none;
   width: 100%;
@@ -271,7 +268,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #533483;
+  background-color: #008000;
   padding: 1rem 0;
   margin-bottom: 1rem;
 }
@@ -292,8 +289,8 @@ main {
 #taskList .add-task-wrapper:hover {
   cursor: pointer;
   color: #ffffff;
-  border: 2px solid #ffffff;
-  background-color: #1b284b;
+  border: 2px solid #b3b3b3;
+  background-color: #333333;
 }
 
 #addTaskForm,
@@ -314,7 +311,7 @@ main {
 #renameTaskForm input,
 #renameTaskForm textarea {
   padding: 0.5rem;
-  background-color: #15203c;
+  background-color: #121212;
   color: #ffffff;
   font-weight: bold;
   outline: none;
@@ -371,10 +368,13 @@ main {
 .taskInfo #taskTitle {
   display: flex;
   align-items: center;
-  border: 1px solid #ffffff;
+  border: 1px solid #b3b3b3;
 }
 .taskInfo #taskTitle .completeLabel {
   padding: 0.5rem;
+}
+.taskInfo #taskTitle .completeLabel:hover {
+  cursor: pointer;
 }
 .taskInfo #taskTitle .taskName {
   margin-right: auto;
@@ -422,7 +422,7 @@ main {
 .taskInfo #description {
   max-height: 0;
   overflow: hidden;
-  border: 1px solid #ffffff;
+  border: 1px solid #b3b3b3;
   transition: max-height 0.5s ease-in-out;
 }
 .taskInfo #description p {
@@ -433,10 +433,11 @@ main {
   overflow-wrap: break-word;
 }
 .taskInfo .arrow-btn {
-  background-color: #1b284b;
+  background-color: #333333;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 .taskInfo .arrow-btn .arrow-down {
-  border: solid #ffffff;
+  border: solid #b3b3b3;
   border-width: 0 3px 3px 0;
   padding: 2px;
   margin-top: 4px;
@@ -471,7 +472,7 @@ main {
 }
 
 .selected {
-  background-color: #008000 !important;
+  background-color: #2036f8 !important;
 }
 
 @media (max-width: 820px) {
